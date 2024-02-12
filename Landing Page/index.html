@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+    <title>Landing page</title>
+</head>
+<body>
+    <div class="  container min-w-full min-h-screen bg-[url('images/image.png')] bg-center bg-cover px-28 py-5 relative max-md:w-full  ">
+        <nav class="flex items-center">
+            <img src="images/logo.png" class="w-40 cursor-pointer max-md:relative mt-0 max-md:right-28">
+            <ul class="flex-1 text-center max-md:hidden max-md:&#xf00d text-white " id="menu" >
+                <p id="remove" class="text-center " onclick="remove()"  >&#10006</p>
+                <li class="list-none inline-block px-5 max-md: py-2 mr-20"><a href="#" class="no-underline text-white px-2">Home</a></li>
+                <li class="list-none inline-block px-5 max-md:py-2 mr-20 "><a href="#" class="no-underline text-white px-2">About</a></li>
+                <li class="list-none inline-block px-5 max-md:py-2 mr-20 "><a href="#" class="no-underline text-white px-2">Features</a></li>
+                <li class="list-none inline-block px-5 max-md:py-2 mr-20 "><a href="#" class="no-underline text-white px-2">Contact</a></li>
+            </ul>
+            <img src="images/cart.png" class="w-8 cursor-pointer max-md:relative max-md:left-10" onclick="showMenu()">
+        </nav>
+        
+        <div class="content text-white mt-48 max-w-xl max-md:w-full flex flex-col ">
+            <h1 class=" heading text-6xl font-semibold leading-normal">Groceries<br>delivery in <span class="font-light">15 mins</span> </h1>
+            <p >Grocify offer a wide range of products , including fresh products, meats, diary, baked goods and non-perishable items</p>
+            <img src="images/grocery-image.png"  class=" image w-80 absolute left-90    " id="image">
+        
+
+            <div class="mt-10">
+            <a href="#" class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border-transparent">Order Now</a>
+            <a href="#" class="text-white">Download App <span class="text-lg inline-block rotate-90 text-white">&#10148</span></a>
+        </div>
+        
+        
+
+        </div>
+        
+            <footer class=" text-white p-4 text-center">
+            <div class="container mx-auto">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    </div>
+
+
+
+    <script>
+        var removeIcon = document.getElementById('remove')
+        var menu = document.getElementById('menu')
+        function showMenu(){
+         menu.style.display="block"
+        }
+        function removeIconShow(){
+
+        if (window.innerWidth <= 768) {
+        // Show remove icon on mobile
+        removeIcon.style.display = 'block';
+        image.style.display="none"
+    } else {
+        // Hide remove icon on desktop
+        removeIcon.style.display = 'none';
+    }
+
+
+}
+function remove(){
+    menu.style.display="none"
+}
+removeIconShow()
+
+    </script>
+</body>
+</html>
+
